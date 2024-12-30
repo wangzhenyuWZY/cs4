@@ -35,7 +35,8 @@
     "type-check": "vue-tsc --noEmit",
     "prepare": "husky install",
     "lint": "eslint --ext .ts,.js,.vue src",
-    "lint:fix": "eslint --ext .ts,.js,.vue --fix src"
+    "lint:fix": "eslint --ext .ts,.js,.vue --fix src",
+    "pre-commit": "lint-staged"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-4030620241128001",
