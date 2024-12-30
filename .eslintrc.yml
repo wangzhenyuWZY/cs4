@@ -31,5 +31,10 @@ rules: {
     quotes: ['error', 'single'],  
     eqeqeq: 'error',  
     curly: 'error',  
-    semi: 0  
+    semi: 0,
+    no-unused-vars: 
+    - error
+    - args: "none"  # 不允许未使用的参数
+    - vars: "all"   # 不允许任何未使用的变量
+    - caughtErrors: "all"  # 不允许未使用的异常变量  
 }
