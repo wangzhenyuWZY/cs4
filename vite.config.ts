@@ -1,25 +1,25 @@
-import { defineConfig } from "vite";
-import uni from "@dcloudio/vite-plugin-uni";
-import tailwindcss from "tailwindcss";
-import uniTailwind from "@uni-helper/vite-plugin-uni-tailwind";
-import path from "path";
+import { defineConfig } from 'vite'
+import uni from '@dcloudio/vite-plugin-uni'
+import tailwindcss from 'tailwindcss'
+import uniTailwind from '@uni-helper/vite-plugin-uni-tailwind'
+import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [uni(), uniTailwind()],
   css: {
     postcss: {
-      plugins: [tailwindcss()],
+      plugins: [tailwindcss()]
     },
     preprocessorOptions: {
       scss: {
-        silenceDeprecations: ["legacy-js-api"],
-      },
-    },
+        silenceDeprecations: ['legacy-js-api']
+      }
+    }
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./"),
-    },
-  },
-});
+      '@': path.resolve(__dirname, './')
+    }
+  }
+})
