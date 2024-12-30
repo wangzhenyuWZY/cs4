@@ -72,6 +72,12 @@ module.exports = [
         ecmaFeatures: {
           jsx: true
         }
+      },
+      globals: {
+        uni: 'readonly', // 声明 `uni` 为只读全局变量
+        wx: 'readonly', // 如果需要，可以添加更多全局变量
+        setTimeout: 'readonly', // 声明 setTimeout 为只读全局变量
+        clearTimeout: 'readonly' // 通常与 setTimeout 一起声明
       }
     },
     plugins: {

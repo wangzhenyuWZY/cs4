@@ -88,21 +88,12 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { onPullDownRefresh } from '@dcloudio/uni-app'
-import { orderList } from '@/utils/type.js'
 import TopBack from '@/static/topBack.png'
-import NameLogo from '@/static/nameLogo.png'
 import TextBack from '@/static/textBack.png'
-import Robot from '@/static/robot.png'
-import Back from '@/static/back.png'
-import New from '@/static/new.png'
-import NewBack from '@/static/newBack.png'
 import Announcement from '@/static/announcement.png'
-import ModalBack from '@/static/modalBack.png'
 import { useDataStore } from '@/stores/data'
-import { getUserInfo } from '@/request/api'
 const popup = ref()
 const useData = useDataStore()
-conw s1 isShowr1321 = ref(false)
 const close = () => {
   popup.value.close()
 }
