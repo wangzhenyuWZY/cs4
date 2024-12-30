@@ -58,7 +58,7 @@
                 <p
                   :style="{
                     backgroundColor:
-                      Number(i.increase) > 0 ? '#1EA266' : '#CF3F48',
+                      Number(i.increase) > 0 ? '#1EA266' : '#CF3F48'
                   }"
                 >
                   {{ i.increase }}%
@@ -86,162 +86,162 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
-import { onPullDownRefresh } from "@dcloudio/uni-app";
-import { orderList } from "@/utils/type.js";
-import TopBack from "@/static/topBack.png";
-import NameLogo from "@/static/nameLogo.png";
-import TextBack from "@/static/textBack.png";
-import Robot from "@/static/robot.png";
-import Back from "@/static/back.png";
-import New from "@/static/new.png";
-import NewBack from "@/static/newBack.png";
-import Announcement from "@/static/announcement.png";
-import ModalBack from "@/static/modalBack.png";
-import { useDataStore } from "@/stores/data";
-import { getUserInfo } from "@/request/api";
-const popup = ref();
-const useData = useDataStore();
+import { ref, onMounted } from 'vue'
+import { onPullDownRefresh } from '@dcloudio/uni-app'
+import { orderList } from '@/utils/type.js'
+import TopBack from '@/static/topBack.png'
+import NameLogo from '@/static/nameLogo.png'
+import TextBack from '@/static/textBack.png'
+import Robot from '@/static/robot.png'
+import Back from '@/static/back.png'
+import New from '@/static/new.png'
+import NewBack from '@/static/newBack.png'
+import Announcement from '@/static/announcement.png'
+import ModalBack from '@/static/modalBack.png'
+import { useDataStore } from '@/stores/data'
+import { getUserInfo } from '@/request/api'
+const popup = ref()
+const useData = useDataStore()
 const close = () => {
-  popup.value.close();
-};
+  popup.value.close()
+}
 const listOperate = [
-  { img: "/static/invite.png", name: "邀请", key: "invite" },
-  { img: "/static/Certification.png", name: "认证", key: "certification" },
-  { img: "/static/c2c.png", name: "C2C", key: "c2c" },
-  { img: "/static/topup.png", name: "充值", key: "topup" },
-  { img: "/static/service.png", name: "客服", key: "service" },
-];
+  { img: '/static/invite.png', name: '邀请', key: 'invite' },
+  { img: '/static/Certification.png', name: '认证', key: 'certification' },
+  { img: '/static/c2c.png', name: 'C2C', key: 'c2c' },
+  { img: '/static/topup.png', name: '充值', key: 'topup' },
+  { img: '/static/service.png', name: '客服', key: 'service' }
+]
 
 const tabs = [
   {
-    name: { img: "/static/invite.png", name: "比特币", enName: "TON" },
-    price: "$89,390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '比特币', enName: 'TON' },
+    price: '$89,390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "以太坊", enName: "ETH" },
-    price: "$390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '以太坊', enName: 'ETH' },
+    price: '$390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "以太坊", enName: "ETH" },
-    price: "$390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '以太坊', enName: 'ETH' },
+    price: '$390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "以太坊", enName: "ETH" },
-    price: "$390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '以太坊', enName: 'ETH' },
+    price: '$390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "以太坊", enName: "ETH" },
-    price: "$390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '以太坊', enName: 'ETH' },
+    price: '$390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "以太坊", enName: "ETH" },
-    price: "$390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '以太坊', enName: 'ETH' },
+    price: '$390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "以太坊", enName: "ETH" },
-    price: "$390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '以太坊', enName: 'ETH' },
+    price: '$390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "以太坊", enName: "ETH" },
-    price: "$390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '以太坊', enName: 'ETH' },
+    price: '$390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "以太坊", enName: "ETH" },
-    price: "$390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '以太坊', enName: 'ETH' },
+    price: '$390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "以太坊", enName: "ETH" },
-    price: "$390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '以太坊', enName: 'ETH' },
+    price: '$390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "以太坊", enName: "ETH" },
-    price: "$390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '以太坊', enName: 'ETH' },
+    price: '$390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "以太坊", enName: "ETH" },
-    price: "$390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '以太坊', enName: 'ETH' },
+    price: '$390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "以太坊", enName: "ETH" },
-    price: "$390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '以太坊', enName: 'ETH' },
+    price: '$390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "以太坊", enName: "ETH" },
-    price: "$390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '以太坊', enName: 'ETH' },
+    price: '$390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "以太坊", enName: "ETH" },
-    price: "$390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '以太坊', enName: 'ETH' },
+    price: '$390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "以太坊", enName: "ETH" },
-    price: "$390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '以太坊', enName: 'ETH' },
+    price: '$390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "以太坊", enName: "ETH" },
-    price: "$390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '以太坊', enName: 'ETH' },
+    price: '$390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "以太坊", enName: "ETH" },
-    price: "$390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '以太坊', enName: 'ETH' },
+    price: '$390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "以太坊", enName: "ETH" },
-    price: "$390.2",
-    increase: "+2.18",
+    name: { img: '/static/invite.png', name: '以太坊', enName: 'ETH' },
+    price: '$390.2',
+    increase: '+2.18'
   },
   {
-    name: { img: "/static/invite.png", name: "比特币", enName: "TON" },
-    price: "$890.2",
-    increase: "-2.18",
-  },
-];
+    name: { img: '/static/invite.png', name: '比特币', enName: 'TON' },
+    price: '$890.2',
+    increase: '-2.18'
+  }
+]
 
 const goAnnouncement = () => {
   uni.navigateTo({
-    url: "/pages/index/components/announcement",
-  });
-};
+    url: '/pages/index/components/announcement'
+  })
+}
 // 下拉刷新逻辑
 onPullDownRefresh(() => {
   setTimeout(() => {
     // 停止下拉刷新动画
-    uni.stopPullDownRefresh();
-  }, 2000); // 模拟延迟 1.5 秒
-});
+    uni.stopPullDownRefresh()
+  }, 2000) // 模拟延迟 1.5 秒
+})
 
 onMounted(() => {
   if (!useData.isHomeModalShow) {
     setTimeout(() => {
-      useData.updateHomeModalShow();
-      popup.value.open("center");
-    }, 1000);
+      useData.updateHomeModalShow()
+      popup.value.open('center')
+    }, 1000)
   }
 
-  if (uni.getStorageSync("token")) {
+  if (uni.getStorageSync('token')) {
   }
-});
+})
 </script>
 
 <style lang="scss">
-@import url("./index.scss");
+@import url('./index.scss');
 </style>
