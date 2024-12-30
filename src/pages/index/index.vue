@@ -102,7 +102,7 @@ import { useDataStore } from '@/stores/data'
 import { getUserInfo } from '@/request/api'
 const popup = ref()
 const useData = useDataStore()
-conws1 isShowr1321 = ref(false)
+conw s1 isShowr1321 = ref(false)
 const close = () => {
   popup.value.close()
 }
