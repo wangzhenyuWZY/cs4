@@ -34,8 +34,8 @@
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
     "type-check": "vue-tsc --noEmit",
     "prepare": "husky install",
-    "lint": "eslint --ext .ts,.js,.vue src",
-    "lint:fix": "eslint --ext .ts,.js,.vue --fix src",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
     "pre-commit": "lint-staged"
   },
   "dependencies": {
