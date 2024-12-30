@@ -1,0 +1,21 @@
+.messagePopBoxMore {
+	::v-deep .uni-popup-message__box {
+		background: rgba(17, 17, 17, 0.6);
+		border-radius: 4px;
+		padding: 10px 12px;
+		.moreBox {
+			display: flex;
+			align-items: center;
+			& > .img {
+				width: 16px;
+				height: 16px;
+			}
+			& > .text {
+				font-weight: 400;
+				font-size: 14px;
+				margin-left: 4px;
+				color: #ffffff;
+			}
+		}
+	}
+}

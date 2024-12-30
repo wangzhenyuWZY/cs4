@@ -1,0 +1,46 @@
+.passwordBox {
+	height: 100vh;
+	overflow: hidden;
+	& > .topBox {
+		padding: 60px 16px 0;
+	}
+	& > .enter {
+		width: calc(100% - 64px);
+		background: #024df6;
+		border-radius: 30px;
+		position: fixed;
+		bottom: 0;
+		left: 50%;
+		cursor: pointer;
+		transform: translateX(-50%);
+		text-align: center;
+		padding: 14px 0;
+		font-weight: 500;
+		font-size: 16px;
+		color: #ffffff;
+	}
+	& > .contentBox {
+		height: 100%;
+		padding: 26px 16px 0;
+		background-color: #f2f6ff;
+		& > .item {
+			margin-bottom: 24px;
+			& > .text {
+				font-weight: 500;
+				margin-bottom: 12px;
+				font-size: 14px;
+				color: #111111;
+			}
+			& > .input {
+				background: #ffffff;
+				border-radius: 8px;
+				padding: 12px 16px;
+				.placeholderClass {
+					font-weight: 400;
+					font-size: 14px;
+					color: rgba(17, 17, 17, 0.4);
+				}
+			}
+		}
+	}
+}

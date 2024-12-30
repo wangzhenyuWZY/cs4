@@ -1,0 +1,69 @@
+.swiperBox {
+	.swiperMore {
+		::v-deep .uni-swiper__dots-box {
+			display: none;
+		}
+		.itemMore {
+			padding: 0px 16px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			& > .content {
+				padding: 0;
+				width: 70%;
+				margin-left: 16px;
+				& > .title {
+					font-weight: 400;
+					font-size: 14px;
+					color: rgba(255, 255, 255, 0.6);
+				}
+				& > .text {
+					font-weight: 400;
+					font-size: 14px;
+					margin-top: 10px;
+					margin-bottom: 20px;
+					color: #ffffff;
+					line-height: 1.5;
+				}
+				& > .go {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					width: 100%;
+					& > .left {
+						font-weight: 500;
+						font-size: 14px;
+						color: #fa9530;
+					}
+					& > .right {
+						display: flex;
+						align-items: center;
+						font-weight: 400;
+						font-size: 12px;
+						color: #ffffff;
+						padding: 4px 6px;
+						border-radius: 30px;
+						background: rgba(60, 60, 60, 0.7);
+					}
+				}
+			}
+			& > .img {
+				width: 30%;
+				box-sizing: border-box;
+				min-width: 100px;
+			}
+		}
+		.swiper-box {
+			// height: 30vh;
+			::v-deep .uni-swiper-wrapper {
+				height: auto;
+				.uni-swiper-slide-frame {
+					height: auto !important;
+					.swiperItemBox {
+						height: auto !important;
+					}
+				}
+			}
+		}
+	}
+}

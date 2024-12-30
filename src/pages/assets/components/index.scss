@@ -1,0 +1,394 @@
+.topUpBox {
+	padding: 60px 16px 20px;
+	& > .topUpBoxMore {
+		position: fixed;
+		bottom: 0;
+		width: 80%;
+		left: 10%;
+		cursor: pointer;
+		background: #024df6;
+		border-radius: 30px;
+
+		font-weight: 500;
+		font-size: 16px;
+		color: #ffffff;
+		text-align: center;
+		padding: 14px 0;
+	}
+	& > .amountBox {
+		margin-top: 26px;
+		& > .title {
+			font-weight: 500;
+			font-size: 14px;
+			color: #111111;
+		}
+		& > .input {
+			margin-bottom: 24px;
+			margin-top: 12px;
+			background: #f2f6ff;
+			border-radius: 8px;
+			padding: 12px 16px;
+			.placeholderClassBox {
+				font-weight: 400;
+				font-size: 14px;
+				color: rgba(17, 17, 17, 0.4);
+			}
+		}
+		& > .hint {
+			display: flex;
+			align-items: center;
+			span {
+				font-weight: 400;
+				font-size: 14px;
+				cursor: pointer;
+				color: #024df6;
+				display: inline-block;
+				border-bottom: 1px solid #024df6;
+			}
+		}
+	}
+	& > .optionBox {
+		margin-top: 34px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		p {
+			cursor: pointer;
+			flex: 1;
+			text-align: center;
+			font-weight: 500;
+			font-size: 16px;
+			color: #111111;
+		}
+	}
+	& > .orderList {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 30px;
+		& > .activeItem ::before {
+			content: '';
+			position: absolute;
+			top: -2px;
+			left: -2px;
+			right: -2px;
+			bottom: -2px;
+			border-radius: 12px; /* 继承圆角 */
+			background: linear-gradient(to right, red, orange, yellow, green, blue); /* 渐变边框颜色 */
+			z-index: -1;
+			padding: 3px; /* 边框宽度 */
+			-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+			-webkit-mask-composite: destination-out;
+			mask-composite: exclude;
+		}
+
+		& > .item {
+			width: 48%;
+			margin-bottom: 10px;
+			cursor: pointer;
+			position: relative;
+			border: 1px solid transparent;
+			box-sizing: border-box;
+			background: #f2f6ff;
+			border-radius: 12px;
+			padding: 20px 16px;
+			& > .text {
+				font-weight: 400;
+				font-size: 14px;
+				color: rgba(17, 17, 17, 0.6);
+			}
+			& > .title {
+				display: flex;
+				align-items: center;
+				margin-bottom: 12px;
+				& > .img {
+					width: 20px;
+					height: 20px;
+					margin-right: 6px;
+				}
+				& > span {
+					font-weight: 400;
+					font-size: 14px;
+					color: #111111;
+				}
+			}
+		}
+	}
+}
+
+.transferBox {
+	padding: 60px 16px 20px;
+	& > .amountBox {
+		background: #f2f6ff;
+		border-radius: 12px;
+		padding: 20px 16px;
+		& > .num {
+			font-weight: 500;
+			font-size: 18px;
+			color: #ff0004;
+			margin-top: 6px;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		& > .accountMargin {
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
+		& > .account {
+			background: #ffffff;
+			border-radius: 8px;
+			padding: 12px 16px;
+			.placeholderClass {
+				font-weight: 400;
+				font-size: 14px;
+				color: rgba(17, 17, 17, 0.4);
+			}
+		}
+		& > .enter {
+			background: #024df6;
+			text-align: center;
+			font-weight: 500;
+			font-size: 16px;
+			color: #ffffff;
+			padding: 14px 0;
+			cursor: pointer;
+			border-radius: 30px;
+		}
+
+		& > .title {
+			font-weight: 500;
+			font-size: 16px;
+			color: #111111;
+			text-align: center;
+		}
+	}
+	& > .item {
+		padding: 20px 16px;
+		background: #f2f6ff;
+		margin-bottom: 14px;
+		border-radius: 12px;
+		& > .change {
+			font-weight: 400;
+			font-size: 12px;
+			margin-top: 6px;
+			color: rgba(17, 17, 17, 0.6);
+		}
+		& > .top {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			& > .textA {
+				flex: 1;
+				& > .img {
+					width: 20px;
+					height: 20px;
+					margin: 0 auto;
+					display: block;
+				}
+			}
+			& > .textAll {
+				flex: 2;
+				& > .text {
+					font-weight: 500;
+					margin-bottom: 12px;
+					font-size: 16px;
+					text-align: center;
+					color: #111111;
+				}
+				& > .num {
+					font-weight: 500;
+					font-size: 18px;
+					text-align: center;
+					color: #ff0004;
+				}
+			}
+		}
+		& > .input {
+			margin-top: 20px;
+			background: #ffffff;
+			border-radius: 8px;
+			border: 1px solid #ffffff;
+			padding: 12px 16px;
+			.placeholderClass {
+				font-weight: 400;
+				font-size: 14px;
+				color: rgba(17, 17, 17, 0.4);
+			}
+		}
+		& > .enter {
+			margin-top: 20px;
+			background: #024df6;
+			text-align: center;
+			font-weight: 500;
+			font-size: 16px;
+			color: #ffffff;
+			padding: 14px 0;
+			cursor: pointer;
+			border-radius: 30px;
+		}
+	}
+}
+
+.withdrawCashBox {
+	padding: 60px 16px 20px;
+	& > .item {
+		margin-bottom: 24px;
+		& > .text {
+			font-weight: 500;
+			margin-bottom: 12px;
+			font-size: 14px;
+			color: #111111;
+		}
+		& > .input {
+			background: #f2f6ff;
+			padding: 12px 16px;
+			border-radius: 8px;
+			.placeholderClass {
+				font-weight: 400;
+				font-size: 14px;
+				color: rgba(17, 17, 17, 0.4);
+			}
+		}
+	}
+	& > .enter {
+		background: #024df6;
+		border-radius: 30px;
+		font-weight: 500;
+		text-align: center;
+		position: fixed;
+		width: 80%;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		cursor: pointer;
+		padding: 14px 0;
+		font-size: 16px;
+		color: #ffffff;
+	}
+	& > .amount {
+		position: relative;
+		& > .img {
+			width: 100%;
+			max-height: 100px;
+		}
+		& > .content {
+			position: absolute;
+			width: 100%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			& > .text {
+				font-weight: 500;
+				text-align: center;
+				font-size: 14px;
+				color: rgba(17, 17, 17, 0.4);
+				margin-bottom: 12px;
+			}
+
+			& > .num {
+				font-weight: 500;
+				font-size: 34px;
+				text-align: center;
+				color: #111111;
+			}
+		}
+	}
+}
+
+.topUpPopupBoxMore {
+	::v-deep [name*='content'] {
+		border-radius: 12px 12px 0 0 !important;
+		.uni-popup__wrapper {
+			border-radius: 12px 12px 0 0 !important;
+			overflow: hidden;
+			.topUpBoxMore {
+				border-radius: 12px 12px 0 0 !important;
+				padding: 20px 16px;
+				& > .title {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					& > .img {
+						width: 19px;
+						height: 19px;
+					}
+					& > .text {
+						font-weight: 500;
+						font-size: 18px;
+						margin-left: 10px;
+						color: #111111;
+					}
+				}
+				& > .num {
+					font-weight: 500;
+					text-align: center;
+					font-size: 22px;
+					margin-top: 32px;
+					margin-bottom: 12px;
+					color: #111111;
+				}
+				& > .time {
+					font-weight: 400;
+					font-size: 14px;
+					text-align: center;
+					span {
+						font-size: 13px;
+						color: #ff0004;
+					}
+					color: rgba(17, 17, 17, 0.4);
+				}
+				& > .qrCode {
+					width: 50%;
+					max-height: 160px;
+					display: block;
+					margin: 0 auto;
+				}
+
+				& > .question {
+					margin-top: 12px;
+					background: #f2f6ff;
+					border-radius: 12px;
+					padding: 12px 14px;
+
+					& > .text {
+						font-weight: 400;
+						margin-bottom: 6px;
+						font-size: 14px;
+						line-height: 1.2;
+						color: rgba(17, 17, 17, 0.6);
+					}
+					& > .code {
+						width: 50%;
+						display: block;
+						margin: 0 auto;
+						max-height: 140px;
+					}
+				}
+				& > .hint {
+					background: #f2f6ff;
+					margin-top: 28px;
+					margin-bottom: 16px;
+					padding: 12px 16px;
+					border-radius: 12px;
+					& > .text {
+						font-weight: 500;
+						font-size: 15px;
+						color: #111111;
+						line-height: 1.2;
+						span {
+							cursor: pointer;
+							color: #ff0004;
+						}
+					}
+					& > .title {
+						font-weight: 500;
+						margin-bottom: 6px;
+						font-size: 14px;
+						color: #024df6;
+					}
+				}
+			}
+		}
+	}
+}

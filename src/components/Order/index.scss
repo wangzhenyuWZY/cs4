@@ -1,0 +1,50 @@
+.orderItemBox {
+	padding: 14px 16px;
+	overflow-y: auto;
+	& > .moreBox {
+		padding: 14px 16px;
+		margin-bottom: 12px;
+		border-radius: 12px;
+		background: #ffffff;
+		& > .top {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 14px;
+			& > .niu {
+				font-weight: 500;
+				font-size: 14px;
+				color: #111111;
+			}
+			& > .loading {
+				font-weight: 500;
+				font-size: 14px;
+				color: #0dc414;
+			}
+		}
+
+		& > .content {
+			display: flex;
+			justify-content: space-between;
+			.textMore {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				p {
+					font-weight: 400;
+					font-size: 14px;
+				}
+			}
+			& > .left {
+				display: flex;
+				& > .img {
+					min-width: 100px;
+					width: 28%;
+					height: auto;
+					aspect-ratio: 1/1;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}

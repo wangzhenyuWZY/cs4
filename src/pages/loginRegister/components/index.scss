@@ -1,0 +1,142 @@
+.moreBoxToken {
+	height: 100vh;
+	.displayNoneMore {
+		display: none !important;
+	}
+	& > .topBox {
+		position: relative;
+		& > .img {
+			width: 100%;
+			max-height: 220px;
+		}
+		& > .content {
+			position: absolute;
+			left: 28px;
+			bottom: 50px;
+			& > .text {
+				font-weight: 500;
+				font-size: 14px;
+				color: rgba(17, 17, 17, 0.4);
+			}
+			& > .title {
+				font-weight: bold;
+				font-size: 30px;
+				color: #111111;
+				margin-bottom: 12px;
+			}
+		}
+	}
+	& > .contentBox {
+		margin-top: -20px;
+		height: 100%;
+		position: relative;
+		background: #f2f6ff;
+		padding: 22px 16px 15px;
+		border-radius: 24px 24px 0px 0px;
+		& > .enter {
+			background: #024df6;
+			border-radius: 30px;
+			font-weight: 500;
+			font-size: 16px;
+			margin-top: 42px;
+			margin-bottom: 16px;
+			padding: 14px 0;
+			cursor: pointer;
+			text-align: center;
+			color: #ffffff;
+		}
+		& > .position {
+			position: fixed;
+			width: 100%;
+			bottom: 12px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		& > .agree {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 400;
+			font-size: 12px;
+			color: rgba(17, 17, 17, 0.6);
+
+			& > .img {
+				width: 12px;
+				height: 12px;
+				cursor: pointer;
+			}
+			& > .text {
+				cursor: pointer;
+				color: #4d72e3;
+			}
+		}
+		& > .go {
+			font-weight: 400;
+			font-size: 14px;
+			margin-bottom: 38px;
+			color: #111111;
+			text-align: center;
+			span {
+				display: inline-block;
+				border-bottom: 1px solid #024df6;
+				color: #024df6;
+				cursor: pointer;
+			}
+		}
+
+		.inputBox {
+			padding: 12px 16px;
+			background: #ffffff;
+			margin-bottom: 12px;
+			border-radius: 100px;
+			.placeholderClass {
+				font-weight: 400;
+				font-size: 14px;
+				color: rgba(17, 17, 17, 0.4);
+			}
+		}
+		.inputBoxPass {
+			padding: 12px 50px 12px 16px;
+		}
+		.passwordBox {
+			position: relative;
+			& > .img {
+				position: absolute;
+				top: 50%;
+				cursor: pointer;
+				right: 15px;
+				transform: translateY(-50%);
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+}
+
+.loginPopupBoxMessage {
+	::v-deep .uni-popup-message__box {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.loginPopupBoxMore {
+	::v-deep [name*='content'] {
+		border-radius: 15px 15px 0 0 !important;
+		overflow: hidden;
+		.uni-popup__wrapper {
+			border-radius: 15px 15px 0 0 !important;
+			.boxMore {
+				padding: 20px 16px;
+				border-radius: 15px 15px 0 0 !important;
+				h1 {
+					margin-bottom: 20px;
+				}
+				h2 {
+					margin-top: 16px;
+					margin-bottom: 8px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,167 @@
+.tradeZoneContent {
+	background-image: url('@/static/nodeBack.png');
+	padding: 70px 16px;
+	background-size: 100%;
+	max-height: 100vh;
+	background-repeat: no-repeat;
+	& > .MiningMachineBox {
+		margin: 32px 16px 0;
+		& > .title {
+			font-weight: 500;
+			font-size: 18px;
+			margin-bottom: 12px;
+			color: #111111;
+		}
+		& > .item {
+			background: #f2f6ff;
+			padding: 14px 16px;
+			margin-bottom: 14px;
+			border-radius: 12px;
+			& > .top {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				& > .text {
+					font-weight: 500;
+					font-size: 16px;
+					color: #111111;
+				}
+				& > .num {
+					font-weight: 500;
+					font-size: 16px;
+					color: #ff0004;
+				}
+			}
+			& > .content {
+				display: flex;
+				margin: 10px 0 5px;
+				align-items: center;
+				justify-content: space-between;
+				& > .img {
+					width: 110px;
+					height: 110px;
+					box-sizing: border-box;
+				}
+				& > .box {
+					flex: 1;
+					margin-left: 10px;
+					& > .textItem {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						& > .text {
+							font-weight: 400;
+							font-size: 14px;
+							color: rgba(17, 17, 17, 0.4);
+						}
+						& > .num {
+							font-weight: 500;
+							font-size: 14px;
+							color: #111111;
+						}
+					}
+				}
+			}
+			& > .buy {
+				background: #024df6;
+				border-radius: 30px;
+				padding: 10px 40px;
+				width: fit-content;
+				font-weight: 500;
+				font-size: 14px;
+				color: #ffffff;
+				cursor: pointer;
+				margin-left: auto;
+			}
+		}
+	}
+	& > .topBox {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		& > .top {
+			width: 49%;
+			position: relative;
+			& > .img {
+				width: 100%;
+				max-height: 110px;
+			}
+			& > .content {
+				position: absolute;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: calc(100% - 32px);
+				.text {
+					.name {
+						font-weight: 500;
+						font-size: 14px;
+						color: rgba(255, 255, 255, 0.8);
+					}
+					.num {
+						margin-top: 6px;
+						font-family: DIN Alternate, DIN Alternate;
+						font-weight: bold;
+						font-size: 24px;
+						color: #ffffff;
+					}
+				}
+				& > .poImg {
+					width: 20px;
+					height: 20px;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+.tradeZonePopupBox {
+	::v-deep .uni-popup__wrapper {
+		width: 80%;
+		border-radius: 8px;
+		.popup-content {
+			padding-top: 20px;
+			& > .title {
+				font-weight: 500;
+				text-align: center;
+				font-size: 18px;
+				color: #333333;
+			}
+			& > .text {
+				width: 80%;
+				font-weight: 500;
+				line-height: 1.2;
+				margin: 17px auto;
+				text-align: center;
+				font-size: 14px;
+				color: #333333;
+				span {
+					color: #024df6;
+				}
+			}
+			& > .content {
+				display: flex;
+				border-top: 2px solid rgb(245, 245, 245);
+				align-items: center;
+				text-align: center;
+				justify-content: space-between;
+				p {
+					flex: 1;
+					padding: 14px 0;
+					font-weight: 500;
+					font-size: 16px;
+					color: rgba(17, 17, 17, 0.4);
+					border-right: 2px solid rgb(245, 245, 245);
+				}
+				.sure {
+					border-right: none;
+					color: #024df6;
+				}
+			}
+		}
+	}
+}

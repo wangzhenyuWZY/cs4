@@ -1,0 +1,55 @@
+.announcementBox {
+	padding: 60px 16px 0;
+	& > .top {
+		display: flex;
+		margin-bottom: 16px;
+		align-items: center;
+		justify-content: space-between;
+		& > .text {
+			font-weight: 500;
+			font-size: 17px;
+			color: #000000;
+		}
+		& > .img {
+			width: 24px;
+			height: 24px;
+			cursor: pointer;
+		}
+	}
+	& > .item {
+		padding: 12px 16px;
+		background: #f2f6ff;
+		margin-bottom: 14px;
+		border-radius: 12px;
+		& > .text {
+			font-weight: 400;
+			font-size: 14px;
+			color: #111111;
+			margin-bottom: 8px;
+		}
+		p {
+			line-height: 1.2;
+		}
+		& > .time {
+			font-weight: 400;
+			font-size: 12px;
+			color: rgba(17, 17, 17, 0.4);
+		}
+	}
+}
+
+.DetailBox {
+	padding: 60px 16px 0;
+	& > .text {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1.2;
+		margin-bottom: 24px;
+		color: #111111;
+	}
+	& > .time {
+		font-weight: 400;
+		font-size: 12px;
+		color: rgba(17, 17, 17, 0.4);
+	}
+}
